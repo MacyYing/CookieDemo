@@ -1,0 +1,22 @@
+﻿@model IEnumerable<System.Security.Claims.Claim>
+
+<h1>
+    This Is PrivatePage
+</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Claim Type</th>
+            <th>Claim Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var claim in Model){
+            <tr>
+                <td>@claim.Type</td>
+                <td>@claim.Value</td>
+            </tr>
+        }
+    </tbody>
+</table>
